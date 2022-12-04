@@ -24,6 +24,9 @@ ul {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 h1,
@@ -39,11 +42,18 @@ p {
 
 .container {
   align-items: center;
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width:768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width:1200px) {
+    width: 1200px;
+  }
 }
 
 /* Button */
@@ -64,24 +74,36 @@ p {
 
   width: 216px;
   height: 50px;
+  margin-top: 30px;
 }
 
 /* Section */
 .section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width:1200px) {
   padding-top: 94px;
   padding-bottom: 94px;
+    
+  }
 }
 
 .section-title {
   color: $title-text-color;
 
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
 
   margin-top: 0;
   margin-bottom: 50px;
+
+  @media screen and (min-width:1200px) {
+    font-size: 36px;
+  line-height: 1.17
+  }
 }
 
 .no-padding {

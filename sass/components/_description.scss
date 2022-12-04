@@ -1,8 +1,24 @@
 .description {
+  display: block;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px;
+  
+
+  @media screen and (min-width:768px) {
     display: flex;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin: 0px;
+      flex-wrap: nowrap;
+    }
 
     &__title {
       color: $title-text-color;
@@ -14,16 +30,29 @@
     
       margin-top: 0px;
       margin-bottom: 10px;
+
+      @media screen and (max-width: 767px) {
+        text-align: center;
+      }
     }
 
     &__item {
-      display: inline-block;
-      width: 270px;
+      margin-bottom: 30px;
+
+      @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
+        margin: 0;
+        margin-bottom: 30px;
+      }
+     
+      @media screen and (min-width: 1200px) {
+        display: inline-block;
+      width: calc((100% - 90px) / 4);
       padding-left: 0px;
-      margin-left: 30px;
 
       &:first-child {
         margin-left: 0;
+      }
       }
     }
 
