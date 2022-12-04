@@ -26,7 +26,9 @@
 .modal {
   width: 450px;
   height: 609px;
+  padding: 40px;
   background-color: #fff;
+  border-radius: 4px;
 
   position: absolute;
   top: 50%;
@@ -73,16 +75,16 @@
     text-align: center;
     letter-spacing: 0.03em;
     justify-content: center;
-    margin-top: 40px;
+    // margin-top: 40px;
 
     color: #212121;
   }
 
-  &__form {
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 12px;
-  }
+  // &__form {
+  //   margin-left: 40px;
+  //   margin-right: 40px;
+  //   margin-top: 12px;
+  // }
 
   &__form-input {
     margin-top: 4px;
@@ -196,12 +198,17 @@
   }
 
   &__form-policy {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: $primary-text-color;
     margin-left: 10px;
     display: inline-block;
+
+    @media screen and (min-width:1200px) {
+      font-size: 14px;
+    line-height: 1.71;
+    }
   }
 
   &__checkbox-icon {
